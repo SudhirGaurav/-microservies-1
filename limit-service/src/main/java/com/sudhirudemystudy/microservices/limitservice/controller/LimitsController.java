@@ -13,6 +13,11 @@ public class LimitsController {
 	@Autowired
 	Configuration configuration;
 	
+	@GetMapping("/")
+	public String testMandatory() {
+		return "Hello I am using Spring booot";
+	}
+	
 	@GetMapping("/limits")
 	public Limits retriveLimits() {
 		System.out.println("This is first rest call ....");
