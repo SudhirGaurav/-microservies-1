@@ -1,0 +1,2 @@
+#.URL for eureka
+http://localhost:8761/

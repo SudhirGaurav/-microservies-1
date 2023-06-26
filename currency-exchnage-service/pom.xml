@@ -31,6 +31,12 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
+		
+		<!-- Only this is enough to tegister this servie to eureka serevr  -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 		<!-- this will use for hot deployment , but this does not pich pom.xml changes -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
