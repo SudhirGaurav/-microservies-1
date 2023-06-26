@@ -1,3 +1,6 @@
+Project available in udemy repo 
+https://github.com/in28minutes/spring-microservices-v2/blob/main/03.microservices/currency-exchange-service/src/main/resources/application.properties
+
 url of currency-exchange-service 
 http://localhost:8000/currency-exchange/from/USD/to/INR
 

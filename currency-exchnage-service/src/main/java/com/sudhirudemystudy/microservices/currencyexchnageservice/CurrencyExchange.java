@@ -2,18 +2,28 @@ package com.sudhirudemystudy.microservices.currencyexchnageservice;
 
 import java.math.BigDecimal;
 
-public class CurrencyExchange {
 
+//Do not import javax import for Entiry, Column , ID. It is depricaed from Spring boot-jpa-data 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+
+@Entity
+public class CurrencyExchange {
 	
+	@Id
 	private Long id;
-	private	String from ;
+	
+	@Column(name = "currency_from")
+	private String from;
+	
+	@Column(name = "currency_to")
 	private String to;
+
 	private BigDecimal conversionMultiple;
-	
-	//this is port of the instabce 
-	private String environment; // this will be used when we run multiple instance of currency exchnage service service 
-	
-	
+	private String environment;
+
 	public CurrencyExchange() {
 		
 	}
@@ -66,14 +76,6 @@ public class CurrencyExchange {
 	public void setEnvironment(String environment) {
 		this.environment = environment;
 	}
+	
 
-	@Override
-	public String toString() {
-		return "CurrencyExchange [id=" + id + ", from=" + from + ", to=" + to + ", conversionMultiple="
-				+ conversionMultiple + "]";
-	}
-	
-	
-	
-	
 }
