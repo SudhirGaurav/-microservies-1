@@ -5,6 +5,14 @@
 		ThereFore , Spring cloud provided a FW called Feng ,which will handle to call multiple microservices.
 	3. This is Spring cloud framework. 
 	4.It is used for calling MSs
-	5. This is also used for handle load-balancing easily 
+	5. This can NOT  used for handle load-balancing easily [bellow is reason] 
+	6. code bellow is problme .
+		@FeignClient(name = "currency-exchange" , url = "localhost:8000")
+		 Hardcoded port is biggest issue. this is king of static MS calling.
+		 we can not run MSs dinimically bcz url port is hardcoded .
+		 
+		 So Hardcode port is the problem therefore need to go for Naming server ....
+		
 	
-#.Naming server , 
+#.Naming server or service registery, 
+	1. Must read point 6 above[IMP]
