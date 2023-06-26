@@ -1,4 +1,5 @@
-url of currency conversion : 
+#.url of currency conversion : 
+for path : Currency-conversion-MS <----> Currency-exchange-MS
 http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
 
 Response Structure
@@ -11,3 +12,9 @@ Response Structure
   "totalCalculatedAmount": 650.00,
   "environment": "8000 instance-id"
 }
+
+
+
+#.For Feign :
+for path : Currency-conversion-MS <---->feigh <---->  Currency-exchange-MS
+http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10

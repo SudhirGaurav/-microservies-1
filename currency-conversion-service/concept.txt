@@ -1,0 +1,10 @@
+
+#.About "Feign framework"" ?????
+	1.Video : 149.
+	2.as u can see  in CurrencyConversionController.java[18], for one microservice call ,we need to write 20 lines of code .IN real work  appl, there could be 1000 MS , think once how many line of code is needed for for .
+		ThereFore , Spring cloud provided a FW called Feng ,which will handle to call multiple microservices.
+	3. This is Spring cloud framework. 
+	4.It is used for calling MSs
+	5. This is also used for handle load-balancing easily 
+	
+#.Naming server , 

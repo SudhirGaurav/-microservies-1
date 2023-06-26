@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,9 @@ import jakarta.websocket.server.PathParam;
 
 @RestController
 public class CurrencyConversionController {
+	
+	@Autowired
+	private CurrencyExchangeProxy proxy;
 
 	@GetMapping("/currency-conversion/from/{from}/to/{to}/quantity/{quantity}")
 	public CurrencyConversion getCurrencyConversion(@PathVariable String from, @PathVariable String to , @PathVariable BigDecimal quantity) {
@@ -26,9 +30,18 @@ public class CurrencyConversionController {
 				"http://localhost:8000/currency-exchange/from/{from}/to/{to}", CurrencyConversion.class, uriVariable);
 		CurrencyConversion currencyCoversion = responseEntity.getBody();
 		BigDecimal convertedValue= quantity.multiply(currencyCoversion.getConversionMultiple());
-		return new CurrencyConversion(currencyCoversion.getId(), from, to, quantity, currencyCoversion.getConversionMultiple(), convertedValue,currencyCoversion.getEnvironment());
+		return new CurrencyConversion(currencyCoversion.getId(), from, to, quantity, currencyCoversion.getConversionMultiple(), convertedValue,currencyCoversion.getEnvironment()+" "+" Rest_Template");
 		
-		
+		//Note :as u can see , for one microservice call ,we need to write 20 lines of code .IN real work  appl, there could be 1000 MS , think once how many line of code is needed for for .
+		//ThereFore , Spring cloud provided a FW called Feng ,which will handle to call multiple microservices
 	
+	}
+	
+	@GetMapping("/currency-conversion-feign/from/{from}/to/{to}/quantity/{quantity}")
+	public CurrencyConversion getCurrencyConversionFeign(@PathVariable String from, @PathVariable String to , @PathVariable BigDecimal quantity) {
+		System.out.println("Calling Feign to call currency-Exchange MS");
+		CurrencyConversion currencyCoversion =proxy.retriveExchangeValue(from, to);
+		BigDecimal convertedValue= quantity.multiply(currencyCoversion.getConversionMultiple());
+		return new CurrencyConversion(currencyCoversion.getId(), from, to, quantity, currencyCoversion.getConversionMultiple(), convertedValue,currencyCoversion.getEnvironment()+" "+"feign");
 	}
 }
