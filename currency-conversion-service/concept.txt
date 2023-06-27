@@ -12,8 +12,15 @@
 		 we can not run MSs dinimically bcz url port is hardcoded .
 		 
 		 So Hardcode port is the problem therefore need to go for Naming server ....
+		 
+	7.Feign is actually a load banlancer . when we removed hardcoded port it will talk to eureka naming server and it will sereced the registered-up service which is present in eureka  
+	8. Ribbon is one more example of load balancer.
 		
 	
 #.Naming server or service registery,  Eureka naming serever 
 	1. Must read point 6 above[IMP]
 	2. Eureka is a naming server or service registry which is provided by spring cloud
+	
+#Spring cloud API gateway 
+	In real world there will be 10000+ MSs ,for this there will be multiple of same code will be required for all MSs . same code will be for login , authentication etc... 
+	For this we will use spring cloud API gateway

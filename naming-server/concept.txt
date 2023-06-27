@@ -17,3 +17,7 @@
 #.Naming server or service registery,  Eureka naming serever 
 	1. Must read point 6 above[IMP]
 	2. Eureka is one kind of naming server or service registry which is provided by spring cloud
+	
+	
+#.Udemy repo of Spring boot 3.0+ 
+	https://github.com/in28minutes/spring-microservices-v3

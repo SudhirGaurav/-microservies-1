@@ -1,2 +1,24 @@
+#.url of currency conversion : 
+for path : Currency-conversion-MS <----> Currency-exchange-MS
+http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+
+Response Structure
+{
+  "id": 10001,
+  "from": "USD",
+  "to": "INR",
+  "conversionMultiple": 65.00,
+  "quantity": 10,
+  "totalCalculatedAmount": 650.00,
+  "environment": "8000 instance-id"
+}
+
+
+
+#.For Feign :
+for path : Currency-conversion-MS <---->feigh <---->  Currency-exchange-MS
+http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+
 #.URL for eureka
 http://localhost:8761/
+
