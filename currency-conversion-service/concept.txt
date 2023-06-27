@@ -22,5 +22,7 @@
 	2. Eureka is a naming server or service registry which is provided by spring cloud
 	
 #Spring cloud API gateway 
-	In real world there will be 10000+ MSs ,for this there will be multiple of same code will be required for all MSs . same code will be for login , authentication etc... 
+	1.In real world there will be 10000+ MSs ,for this there will be multiple of same code will be required for all MSs . same code will be for login , authentication, security etc... 
 	For this we will use spring cloud API gateway
+	2. spring-cloud-starter-gateway is pom dependency for api-gateway
+	
