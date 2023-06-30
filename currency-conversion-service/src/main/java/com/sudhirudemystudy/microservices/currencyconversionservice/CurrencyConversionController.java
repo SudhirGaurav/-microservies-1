@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +18,7 @@ import jakarta.websocket.server.PathParam;
 @RestController
 public class CurrencyConversionController {
 	
+	private Logger logger = LoggerFactory.getLogger(CurrencyConversionController.class);
 	@Autowired
 	private CurrencyExchangeProxy proxy;
 
@@ -39,6 +42,7 @@ public class CurrencyConversionController {
 	
 	@GetMapping("/currency-conversion-feign/from/{from}/to/{to}/quantity/{quantity}")
 	public CurrencyConversion getCurrencyConversionFeign(@PathVariable String from, @PathVariable String to , @PathVariable BigDecimal quantity) {
+		logger.info("I am in currency Conversion Feign load balancer  ...............");
 		System.out.println("Calling Feign to call currency-Exchange MS");
 		CurrencyConversion currencyCoversion =proxy.retriveExchangeValue(from, to);
 		BigDecimal convertedValue= quantity.multiply(currencyCoversion.getConversionMultiple());
