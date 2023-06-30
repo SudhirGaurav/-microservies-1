@@ -37,6 +37,15 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<!-- This bellow two dependency s for circuit breaker /resilience4j fw -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.github.resilience4j</groupId>
+			<artifactId>resilience4j-spring-boot2</artifactId>
+		</dependency>
 		<!-- this will use for hot deployment , but this does not pich pom.xml changes -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
