@@ -2,6 +2,10 @@ currecy-exchange :
  Successfully built image 'docker.io/sudhirgaurav1/dockerimage-currency-exchnage-service:0.0.1-SNAPSHOT'
  
 #currency-conversion; 
+sudhirgaurav1/dockerimage-currency-conversion-service:0.0.1-SNAPSHOT
 
 #naming-server :
-sudhirgaurav1/dockerimage-naming-server:0.0.1-SNAPSHOT 
+sudhirgaurav1/dockerimage-naming-server:0.0.1-SNAPSHOT
+
+#api-gateway
+sudhirgaurav1/dockerimage-api-gateway:0.0.1-SNAPSHOT

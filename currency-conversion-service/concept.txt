@@ -26,3 +26,21 @@
 	For this we will use spring cloud API gateway
 	2. spring-cloud-starter-gateway is pom dependency for api-gateway
 	
+#Create docker image .
+
+	1.Use bellow tag under spring-booot build tag of pom.xml
+				<configuration>
+					<image>
+						<name>sudhirgaurav1/dockerimage-${project.artifactId}:${project.version}</name>
+						<pullPolicy>IF_NOT_PRESENT</pullPolicy>
+					</image>
+				</configuration>
+				
+	2.pom.xml run as -> 
+		spring-boot:build-image -DskipTests
+	3. One second command is successfull , docker image ll be created inside docker server
+#docker-compose.yaml
+	1. This need to use to run all MS at a same time.
+	2. command to execute yaml file 
+		docker-compose up
+	

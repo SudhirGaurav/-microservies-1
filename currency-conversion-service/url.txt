@@ -20,11 +20,16 @@ http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/USD/to/
 
 Flow will be like that , API-GATEWAY--> eureka--> Currency-conversion -->Currency-exchange -- >db
 						 API-GATEWAY--> eureka -->Currency-exchange -- >db
-Note:Syntax :
+Note:Syntax for api-gateway:
 	http://localhost:8765/<Application name for Eureka>/URL-of-Service
 
-	
+
+#H2 database
+  http://localhost:8000/h2-console/login.do	
  jdbc:h2:mem:testdb
  
  #Command to genarate Doecker image :
  	spring-boot:build-image -DskipTests
+ 	
+ # github url for udemy by in28minutes
+ https://github.com/in28minutes/spring-microservices-v3/tree/main/04.docker/01-step-by-step-changes#docker-compose

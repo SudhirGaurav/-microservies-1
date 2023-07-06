@@ -14,3 +14,21 @@ services:
     image: sudhirgaurav1/dockerimage-naming-server:0.0.1-SNAPSHOT
     ports:
       - "8761:8761"
+      
+  currency-conversion:
+    image: sudhirgaurav1/dockerimage-currency-conversion-service:0.0.1-SNAPSHOT
+    ports:
+      - "8100:8100"
+    depends_on:
+      - naming-server
+    environment:
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+      
+  api-gateway:
+    image: sudhirgaurav1/dockerimage-api-gateway:0.0.1-SNAPSHOT
+    ports:
+      - "8765:8765"
+    depends_on:
+      - naming-server
+    environment:
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
