@@ -1,0 +1,7 @@
+currecy-exchange :
+ Successfully built image 'docker.io/sudhirgaurav1/dockerimage-currency-exchnage-service:0.0.1-SNAPSHOT'
+ 
+#currency-conversion; 
+
+#naming-server :
+sudhirgaurav1/dockerimage-naming-server:0.0.1-SNAPSHOT 

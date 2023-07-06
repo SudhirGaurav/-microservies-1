@@ -22,3 +22,9 @@ Flow will be like that , API-GATEWAY--> eureka--> Currency-conversion -->Currenc
 						 API-GATEWAY--> eureka -->Currency-exchange -- >db
 Note:Syntax :
 	http://localhost:8765/<Application name for Eureka>/URL-of-Service
+
+	
+ jdbc:h2:mem:testdb
+ 
+ #Command to genarate Doecker image :
+ 	spring-boot:build-image -DskipTests
