@@ -6,7 +6,7 @@ http://localhost:8000/currency-exchange/from/USD/to/INR
 for path : Currency-conversion-MS <----> Currency-exchange-MS
 http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
  For Feign :
-for path : Currency-conversion-MS <---->feigh <---->  Currency-exchange-MS
+for path : Currency-conversion-MS <---->feign(Load Balancer)<----> eureka naming server <---->  Currency-exchange-MS
 http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
 
 #.URL for eureka
