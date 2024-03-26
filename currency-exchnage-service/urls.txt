@@ -12,5 +12,5 @@ http://localhost:8000/h2-console/login.do?jsessionid=d0c6f3348785f52771f733d8593
 
  jdbc:h2:mem:testdb
  
- #Command to genarate Doecker image :
+ #Command to genarate Docker image :
  	spring-boot:build-image -DskipTests
