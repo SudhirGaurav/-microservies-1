@@ -1,0 +1,13 @@
+When you come to run this project afert log time , and u r not able to recall anything about this project . This note will be important ....
+
+1. First clone master branch 
+#. Import ptoject CC , CE , Naming server only. 
+#. do maven clean and install to all the project one by one . Please note : till here ur non of the servie is started .
+#
+#. Right click on Spring boot application class of each project one by and do run as --> java application 
+    Please note : Which class has main method is called "Spring boot application" class .
+  Order of the start of the application : 1.naming-server-- default port is 8761 
+                                          2. currency-exchange -- Default port 8000
+                                          3. currency-conversion --Default port 8100
+
+
