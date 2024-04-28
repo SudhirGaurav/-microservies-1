@@ -1,0 +1,33 @@
+
+What is docekrlization ??
+	Below is the process is called dockerrization
+	1.Create a docker image of your maven project 
+	2.Push docker image into the docker respository 
+	
+#.Start  a docker image 
+	docker start docker_image_name 
+#.Download and run docekr image 
+	docker run docker_image_name
+	
+	Note : For this Docker hub must be logged in with below command ,
+	docker login
+	userid :sudhurgaurav1
+	Password: Sonamatidevi@1
+#Create docker image .
+
+	1.Use bellow tag under spring-boot build tag of pom.xml
+				<configuration>
+					<image>
+						<name>sudhirgaurav1/dockerimage-${project.artifactId}:${project.version}</name>
+						<pullPolicy>IF_NOT_PRESENT</pullPolicy>
+					</image>
+				</configuration>
+				
+	2.pom.xml run as -> 
+		spring-boot:build-image -DskipTests
+	3. One second command is successfull , docker image ll be created inside docker server
+#docker-compose.yaml
+	1. This need to use to run all MS at a same time.
+	2. command to execute yaml file 
+		docker-compose up
+	

@@ -42,5 +42,4 @@
 #docker-compose.yaml
 	1. This need to use to run all MS at a same time.
 	2. command to execute yaml file 
-		docker-compose up
-	
+		docker-compose up  <-- Need to run this command where .yml file is present 
