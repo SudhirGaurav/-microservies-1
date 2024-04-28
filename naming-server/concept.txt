@@ -14,7 +14,7 @@
 		 So Hardcode port is the problem therefore need to go for Naming server ....
 		
 	
-#.Naming server or service registery,  Eureka naming serever 
+#.Naming server or service registery or service discovery,  Eureka naming serever 
 	1. Must read point 6 above[IMP]
 	2. Eureka is one kind of naming server or service registry which is provided by spring cloud
 	
