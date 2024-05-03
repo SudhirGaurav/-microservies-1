@@ -1,0 +1,11 @@
+
+#.Common code , authentication , ur own security logic can be written in api-gateway
+#.You can call any URL (Which is registered in Eureka naming serevr load balancer) through api-gateway
+	by bellow syntax .
+	
+	Note:Syntax for url for api-gateway:
+	http://localhost:8765/<Application name from Eureka>/URL-of-Service 
+Imp Note : All servies which u r trying to call throgh api-gateway , must registered on eureka .
+#.this api-gateway + Eureka project u can use with any other MS. Because this will simply talk to eureka and call any service URL 
+
+#.AWS also support api-gateway
